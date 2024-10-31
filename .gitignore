@@ -1,0 +1,77 @@
+# Arquivos de usuário específicos
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Pastas de build
+bin/
+obj/
+out/
+[Bb]uild[Ll]og.*
+*.log
+
+# Arquivos de configuração do Visual Studio
+.vs/
+*.vssscc
+*.vsp
+*.vspx
+*.pidb
+*.scc
+
+# Arquivos de cache e temporários
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+_ReSharper*/
+*.DotSettings.user
+
+# Arquivos de configuração de nuget
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Arquivos do sistema de controle de versão
+$tf/
+*.gpState
+
+# Arquivos de cobertura de código
+*.coverage
+*.coveragexml
+*.axocover/*
+
+# Arquivos gerados pelo sistema de build
+*.dll
+*.exe
+*.pdb
+*.cache
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+
+# Arquivos de log e cache temporários
+*.log
+*.cachefile
+*.[Cc]ache
+._*
+.TemporaryItems
+Desktop.ini
+Thumbs.db
