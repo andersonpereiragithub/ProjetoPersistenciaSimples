@@ -1,6 +1,4 @@
-﻿using ProjetoPersistenciaSimples.Repositories;
-
-namespace ProjetoPersistenciaSimples.Services
+﻿namespace ProjetoPersistenciaSimples.Services
 {
     public class ImovelService
     {

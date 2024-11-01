@@ -1,16 +1,18 @@
 ﻿using ProjetoPersistenciaSimples.Models.Clientes;
 using System.Text.Json;
 
-// Repositories/ClienteRepository.cs
 public class ClienteRepository
 {
     private readonly string _filePath;
 
     public ClienteRepository()
     {
-        _filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "cliente.json");
-    }
+        // Define o caminho do arquivo dentro da pasta Data
+        _filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "clientes.json");
 
+        // Cria a pasta Data se não existir
+        Directory.CreateDirectory(Path.GetDirectoryName(_filePath));
+    }
 
     public List<Cliente> GetAllClientes()
     {
@@ -38,7 +40,6 @@ public class ClienteRepository
         File.WriteAllText(_filePath, json);
     }
 }
-
 
 // Repositories/ClienteJsonConverter.cs
 public class ClienteJsonConverter : System.Text.Json.Serialization.JsonConverter<Cliente>
