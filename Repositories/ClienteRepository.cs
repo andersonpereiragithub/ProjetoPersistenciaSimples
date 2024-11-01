@@ -4,13 +4,19 @@ using System.Text.Json;
 // Repositories/ClienteRepository.cs
 public class ClienteRepository
 {
-    private const string FilePath = "clientes.json";
+    private readonly string _filePath;
+
+    public ClienteRepository()
+    {
+        _filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "cliente.json");
+    }
+
 
     public List<Cliente> GetAllClientes()
     {
-        if (!File.Exists(FilePath)) return new List<Cliente>();
+        if (!File.Exists(_filePath)) return new List<Cliente>();
 
-        var json = File.ReadAllText(FilePath);
+        var json = File.ReadAllText(_filePath);
         return JsonSerializer.Deserialize<List<Cliente>>(json, new JsonSerializerOptions
         {
             Converters = { new ClienteJsonConverter() },
@@ -29,7 +35,7 @@ public class ClienteRepository
             WriteIndented = true
         });
 
-        File.WriteAllText(FilePath, json);
+        File.WriteAllText(_filePath, json);
     }
 }
 

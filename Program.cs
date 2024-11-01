@@ -8,6 +8,9 @@ class Program
 {
     static void Main(string[] args)
     {
+        var menu = new Menu();
+        menu.ExibirMenu();
+
         //// Instancia os serviços
         //var clienteService = new ClienteService();
         //var imovelService = new ImovelService();

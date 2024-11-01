@@ -4,13 +4,18 @@ namespace ProjetoPersistenciaSimples.Repositories
 {// Repositories/ImovelRepository.cs
     public class ImovelRepository
     {
-        private const string FilePath = "imoveis.json";
+        private readonly string _filePath;
+
+        public ImovelRepository()
+        {
+            _filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "imoveis.json");
+        }
 
         public List<Imovel> GetAllImoveis()
         {
-            if (!File.Exists(FilePath)) return new List<Imovel>();
+            if (!File.Exists(_filePath)) return new List<Imovel>();
 
-            var json = File.ReadAllText(FilePath);
+            var json = File.ReadAllText(_filePath);
             return JsonSerializer.Deserialize<List<Imovel>>(json, new JsonSerializerOptions
             {
                 Converters = { new ClienteJsonConverter() },
@@ -29,7 +34,7 @@ namespace ProjetoPersistenciaSimples.Repositories
                 WriteIndented = true
             });
 
-            File.WriteAllText(FilePath, json);
+            File.WriteAllText(_filePath, json);
         }
     }
 }
