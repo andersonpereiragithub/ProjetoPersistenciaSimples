@@ -1,0 +1,22 @@
+[
+  {
+    "Id": 1,
+    "Proprietario": {
+      "CPF": "55555555505",
+      "Id": 1,
+      "Nome": "Alexandra de Avila Dutra"
+    },
+    "Endereco": "Av. Br. do Rio Branco, 1843 sala 28",
+    "InscricaoIPTU": "111111111"
+  },
+  {
+    "Id": 2,
+    "Proprietario": {
+      "CPF": "33333333303",
+      "Id": 3,
+      "Nome": "Eloir Fel\u00EDcio Dutra J\u00FAnior"
+    },
+    "Endereco": "Rua Padre Matias, 49 Apto 403",
+    "InscricaoIPTU": "001002003"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "CPF": "55555555505",
+    "Id": 1,
+    "Nome": "Alexandra de Avila Dutra"
+  },
+  {
+    "CNPJ": "000000000100",
+    "Id": 2,
+    "Nome": "ADBENS"
+  },
+  {
+    "CPF": "33333333303",
+    "Id": 3,
+    "Nome": "Eloir Fel\u00EDcio Dutra J\u00FAnior"
+  },
+  {
+    "CNPJ": "555555000100",
+    "Id": 4,
+    "Nome": "A\u0026G Administra\u00E7\u00E3o de Im\u00F3veis Pr\u00F3prios"
+  }
+]
